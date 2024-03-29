@@ -20,7 +20,7 @@ def get_randomized_options(options):
 
 
 # name = st.text_input("👩‍💼 Enter your name: ")
-# url = 'https://youtu.be/zIwLWfaAg-8?si=nApllc7rPZz3CAx_'
+
 
 def question_data(url):
     # with st.spinner("Loading youtube content..."):
@@ -34,7 +34,7 @@ def question_data(url):
     docs = text_splitter.split_documents(doc)
 
 
-    que_no = 8
+    que_no = 6
 
     q = f"""
     You are a helpful assistant programmed to generate questions based on any text provided. For every chunk of text you receive, you're tasked with designing {que_no} distinct questions. Each of these questions will be accompanied by 3 possible answers: one correct answer and two incorrect ones. 
@@ -60,7 +60,7 @@ def question_data(url):
     ]
 
     It is crucial that you adhere to this format as it's optimized for further Python processing.
-
+    strictly follow this instruction - all options should be different option from any question should match with each other
     """
 
     parser = JsonOutputParser()
@@ -78,8 +78,8 @@ def question_data(url):
     return output
 
 
-
-
+url = 'https://youtu.be/zIwLWfaAg-8?si=nApllc7rPZz3CAx_'
+output = question_data(url)
 
 
 

@@ -60,17 +60,18 @@ if process:
             
             st.write(f"{i}. {question}")
 
-            # for j, option in enumerate(options, start=1):
-            #     # Generate a unique key for each checkbox
-            #     checkbox_key = f"checkbox_{i}_{j}"
-            #     selected_option = st.checkbox(option, key=checkbox_key)
+            for j, option in enumerate(options, start=1):
+                #
+            #  Generate a unique key for each checkbox
+                checkbox_key = f"checkbox_{i}_{j}"
+                selected_option = st.checkbox(option, key=checkbox_key)
 
             # st.write("\n")  # Add space between questions
 
             # # Collect selected options from checkboxes
-            # selected_options = [option for option in options if st.checkbox(option, key=checkbox_key)]
+            selected_options = [option for option in options if st.checkbox(option, key=checkbox_key)]
 
-            selected_options = [option for option in options if st.checkbox(option)]
+            # selected_options = [option for option in options if st.checkbox(option)]
             if correct_answer in selected_options and len(selected_options) == 1:
                 score += 1
             else:
@@ -81,8 +82,8 @@ if process:
         submit_button = st.form_submit_button("Submit")
 
     if submit_button:
-        st.header("🎉Quiz Summary")
-        st.header(f"🎉Score is {score}/{len(output)}")
+        st.header(f"🎉📝Quiz Summary: core is {score}/{len(output)}")
+        # st.header(f"🎉Score is {score}/{len(output)}")
 
         for i, question_data in enumerate(output, start=1):
             question, correct_answer, *_ = question_data

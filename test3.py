@@ -7,43 +7,43 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from llm_utils import question_data  # Import the function directly
+from llm_utils import question_data,output  # Import the function directly
 
 st.title("📚🧠EduQuizer: Youtube Video Quiz Maker")
 
 name = st.text_input("👩‍💼 Enter your name: ")
-url = st.text_input("🔗 Enter your video url: ")
+# url = st.text_input("🔗 Enter your video url: ")
 
 process = st.toggle("Submit and Process")
 
-filename = "quize_data.py"
+# filename = "quize_data.py"
 
-if url:
-    # Define the filename you want to check
-    # filename = "quize_data.py"
+# if url:
+#     # Define the filename you want to check
+#     # filename = "quize_data.py"
 
-    # Check if the file exists in the current directory
-    if os.path.isfile(filename):
-        print(f"The file '{filename}' exists in the current directory.")
-    else:
-        print(f"The file '{filename}' does not exist in the current directory.")
+#     # Check if the file exists in the current directory
+#     if os.path.isfile(filename):
+#         print(f"The file '{filename}' exists in the current directory.")
+#     else:
+#         print(f"The file '{filename}' does not exist in the current directory.")
 
-        output = question_data(url) 
-        output_file_name = "quize_data.py"
+#         output = question_data(url) 
+#         output_file_name = "quize_data.py"
 
-        # Write the output data to the Python file
-        with open(output_file_name, "w") as file:
-            file.write("output = ")
-            json.dump(output, file)
+#         # Write the output data to the Python file
+#         with open(output_file_name, "w") as file:
+#             file.write("output = ")
+#             json.dump(output, file)
 
-# from quize_data import output
+# # from quize_data import output
 
-try:
-    from quize_data import output
-except ModuleNotFoundError:
-    # Handle the error gracefully
-    st.warning("No quiz data found. Please provide the URL and submit.")
-    output = None  # Set output to None or any default value as needed
+# try:
+#     from quize_data import output
+# except ModuleNotFoundError:
+#     # Handle the error gracefully
+#     st.warning("No quiz data found. Please provide the URL and submit.")
+#     output = None  # Set output to None or any default value as needed
 
 
 if process:
@@ -81,8 +81,8 @@ if process:
         submit_button = st.form_submit_button("Submit")
 
     if submit_button:
-        st.header("🎉Quiz Summary")
-        st.header(f"🎉Score is {score}/{len(output)}")
+        # st.header("🎉Quiz Summary")
+        st.header(f"🎉📝Quiz Summary: core is {score}/{len(output)}")
 
         for i, question_data in enumerate(output, start=1):
             question, correct_answer, *_ = question_data
@@ -125,12 +125,12 @@ if process:
                 json.dump([quiz_data], file)
 
 
-        if os.path.exists(filename):
-            # Delete the file
-            os.remove(filename)
-            print(f"{filename} deleted successfully.")
-        else:
-            print(f"{filename} does not exist.")
+        # if os.path.exists(filename):
+        #     # Delete the file
+        #     os.remove(filename)
+        #     print(f"{filename} deleted successfully.")
+        # else:
+        #     print(f"{filename} does not exist.")
 
 
 
