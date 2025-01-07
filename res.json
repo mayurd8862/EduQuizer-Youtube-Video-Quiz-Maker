@@ -1,49 +1,49 @@
 {
     "questions": [
         {
-            "question": "What is the primary goal of tokenization in NLP?",
+            "question": "In the K-Nearest Neighbors example, why was it difficult to predict whether Paul would like Song B?",
             "options": [
-                "To convert text into a numerical format usable by computers",
-                "To identify the grammatical structure of sentences",
-                "To analyze the sentiment expressed in text"
+                "Song B's tempo and intensity were too extreme.",
+                "Song B's data point fell outside the range of previous data.",
+                "Song B's tempo and intensity values were in between 'relaxed/fast' and 'light/soaring', making classification ambiguous."
             ],
-            "correct_answer": "To convert text into a numerical format usable by computers"
+            "correct_answer": "Song B's tempo and intensity values were in between 'relaxed/fast' and 'light/soaring', making classification ambiguous."
         },
         {
-            "question": "What is a significant limitation of word-based tokenization?",
+            "question": "What type of machine learning is used when a model learns to identify a dog from images based on feedback (positive or negative) after each prediction?",
             "options": [
-                "It handles misspellings and new words effectively.",
-                "It results in very small vocabularies.",
-                "It can lead to 'out of vocabulary' errors for unseen words."
+                "Supervised Learning",
+                "Unsupervised Learning",
+                "Reinforcement Learning"
             ],
-            "correct_answer": "It can lead to 'out of vocabulary' errors for unseen words."
+            "correct_answer": "Reinforcement Learning"
         },
         {
-            "question": "Which tokenization method offers the best balance between vocabulary size and flexibility, according to the text?",
+            "question": "Which of the following scenarios is an example of supervised learning?",
             "options": [
-                "Character-based tokenization",
-                "Word-based tokenization",
-                "Subword tokenization"
+                "Netflix recommending movies based on past viewing history.",
+                "Analyzing bank data to identify clusters of suspicious transactions.",
+                "Facebook recognizing a friend in a photo based on tagged photos in an album."
             ],
-            "correct_answer": "Subword tokenization"
+            "correct_answer": "Facebook recognizing a friend in a photo based on tagged photos in an album."
         },
         {
-            "question": "What is a potential drawback of character-based tokenization?",
+            "question": "In the context of the provided text, what is a key factor contributing to the success of machine learning today?",
             "options": [
-                "It produces very small vocabularies.",
-                "It preserves the meaning of words exceptionally well.",
-                "It results in extremely long sequences."
+                "The development of new, faster algorithms.",
+                "The increased availability of massive datasets.",
+                "The invention of powerful new programming languages."
             ],
-            "correct_answer": "It results in extremely long sequences."
+            "correct_answer": "The increased availability of massive datasets."
         },
         {
-            "question": "In word-based tokenization, what is assigned to each unique word in the vocabulary?",
+            "question": "What is the primary difference between supervised and unsupervised learning?",
             "options": [
-                "A random alphanumeric string",
-                "A unique index number",
-                "A semantic meaning representation"
+                "Supervised learning uses labeled data; unsupervised learning uses unlabeled data.",
+                "Supervised learning is faster; unsupervised learning is slower.",
+                "Supervised learning is used for prediction; unsupervised learning is used for clustering only."
             ],
-            "correct_answer": "A unique index number"
+            "correct_answer": "Supervised learning uses labeled data; unsupervised learning uses unlabeled data."
         }
     ]
 }
