@@ -7,7 +7,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from llm_utils import question_data  # Import the function directly
+from quize_gen import question_data  # Import the function directly
 
 
 def get_randomized_options(options):

@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+            "question": "What is the primary goal of tokenization in NLP?",
+            "options": [
+                "To convert text into a numerical format usable by computers",
+                "To identify the grammatical structure of sentences",
+                "To analyze the sentiment expressed in text"
+            ],
+            "correct_answer": "To convert text into a numerical format usable by computers"
+        },
+        {
+            "question": "What is a significant limitation of word-based tokenization?",
+            "options": [
+                "It handles misspellings and new words effectively.",
+                "It results in very small vocabularies.",
+                "It can lead to 'out of vocabulary' errors for unseen words."
+            ],
+            "correct_answer": "It can lead to 'out of vocabulary' errors for unseen words."
+        },
+        {
+            "question": "Which tokenization method offers the best balance between vocabulary size and flexibility, according to the text?",
+            "options": [
+                "Character-based tokenization",
+                "Word-based tokenization",
+                "Subword tokenization"
+            ],
+            "correct_answer": "Subword tokenization"
+        },
+        {
+            "question": "What is a potential drawback of character-based tokenization?",
+            "options": [
+                "It produces very small vocabularies.",
+                "It preserves the meaning of words exceptionally well.",
+                "It results in extremely long sequences."
+            ],
+            "correct_answer": "It results in extremely long sequences."
+        },
+        {
+            "question": "In word-based tokenization, what is assigned to each unique word in the vocabulary?",
+            "options": [
+                "A random alphanumeric string",
+                "A unique index number",
+                "A semantic meaning representation"
+            ],
+            "correct_answer": "A unique index number"
+        }
+    ]
+}
